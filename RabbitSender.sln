@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.API", "RabbitSender.API\RabbitSender.API.csproj", "{804BFAF8-4798-436B-AD23-69E675F0EC4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.Application", "RabbitSender.Application\RabbitSender.Application.csproj", "{32522940-0394-4470-833B-C657951342FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.Domain", "RabbitSender.Domain\RabbitSender.Domain.csproj", "{86B1306C-AF83-4ECA-B8D1-F43DA90C7147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.Infrastructure", "RabbitSender.Infrastructure\RabbitSender.Infrastructure.csproj", "{12E695D7-0E06-4B1B-8803-EBA9D71998A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.Worker", "RabbitSender.Worker\RabbitSender.Worker.csproj", "{63D68D6E-DF16-4052-A5B4-D222CD677252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitSender.Tests", "RabbitSender.Tests\RabbitSender.Tests.csproj", "{9952DFB8-8891-40FA-B757-75857360D910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{804BFAF8-4798-436B-AD23-69E675F0EC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804BFAF8-4798-436B-AD23-69E675F0EC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804BFAF8-4798-436B-AD23-69E675F0EC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804BFAF8-4798-436B-AD23-69E675F0EC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32522940-0394-4470-833B-C657951342FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32522940-0394-4470-833B-C657951342FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32522940-0394-4470-833B-C657951342FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32522940-0394-4470-833B-C657951342FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B1306C-AF83-4ECA-B8D1-F43DA90C7147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B1306C-AF83-4ECA-B8D1-F43DA90C7147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B1306C-AF83-4ECA-B8D1-F43DA90C7147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B1306C-AF83-4ECA-B8D1-F43DA90C7147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E695D7-0E06-4B1B-8803-EBA9D71998A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E695D7-0E06-4B1B-8803-EBA9D71998A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E695D7-0E06-4B1B-8803-EBA9D71998A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E695D7-0E06-4B1B-8803-EBA9D71998A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D68D6E-DF16-4052-A5B4-D222CD677252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D68D6E-DF16-4052-A5B4-D222CD677252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D68D6E-DF16-4052-A5B4-D222CD677252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D68D6E-DF16-4052-A5B4-D222CD677252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9952DFB8-8891-40FA-B757-75857360D910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9952DFB8-8891-40FA-B757-75857360D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9952DFB8-8891-40FA-B757-75857360D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9952DFB8-8891-40FA-B757-75857360D910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

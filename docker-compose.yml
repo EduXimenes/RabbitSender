@@ -1,0 +1,63 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: rabbit_sender_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: rabbit_sender_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbit_sender_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: rabbit_sender_api
+    depends_on:
+      - postgres
+      - rabbitmq
+    ports:
+      - "5206:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=rabbit_sender_db;Username=admin;Password=admin"
+      RabbitMQ__Host: "rabbitmq"
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: rabbit_sender_worker
+    depends_on:
+      - backend
+      - rabbitmq
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=rabbit_sender_db;Username=admin;Password=admin"
+      RabbitMQ__Host: "rabbitmq"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: rabbit_sender_frontend
+    ports:
+      - "3000:80"
+
+volumes:
+  pgdata:
